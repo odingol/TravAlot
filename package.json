@@ -1,0 +1,29 @@
+{
+  "name": "project-2-travel-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taylor25et/Project-2-Travel-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taylor25et/Project-2-Travel-App/issues"
+  },
+  "homepage": "https://github.com/Taylor25et/Project-2-Travel-App#readme",
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
+}
