@@ -1,0 +1,60 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+:root {
+    --card-glow: rgb(0, 255, 191);
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+    background: url('../../img/home-bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:0;
+}
+
+.park-bg {
+    min-height: 800px;
+} 
+.carousel-border {
+    border: 5px solid white;
+}
+
+.login-btn {
+    color: white;
+}
+
+
+.cards {
+    background-color: rgba(196, 216, 247, 0.884);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+}
+
+.slide-img {
+    width: 40rem;
+    height: 40rem;
+}
+
+.cards:hover,
+.cards:hover {
+    box-shadow: inset 0px 0px 6px var(--card-glow), 0px 0px 15px var(--card-glow); 
+}
+
+.cards:hover {
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.style-footer {
+    color:white;
+    line-height:60px;
+    margin-top: 15%;
+    margin-bottom: 0%;
+}
+
