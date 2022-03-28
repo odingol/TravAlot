@@ -1,10 +1,7 @@
 const User = require('./users');
-const waterPark = require('./waterParks');
-const resort = require('./resorts');
-const themePark = require('./themeParks');
-const rollerCoaster = require('./rollerCoasters');
+const attractions = require('./attractions');
 
-User.hasMany(waterPark, {
+User.hasMany(attractions, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
@@ -25,6 +22,6 @@ rollerCoaster.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-// I think I will need to merge all of the model js sheets for User to only need one hasMany value //
+// I will need to double check to make sure this is formatted correctly. Going to push now and will talk with groupmates or tutor to confirm. //
 
-module.exports = { User, waterPark, resort, themePark, rollerCoaster };
+module.exports = { User, attractions };
