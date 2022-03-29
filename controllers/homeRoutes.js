@@ -29,4 +29,24 @@ router.get('/waterparks', async (req, res) => {
     }
 });
 
+router.get('/themeparks', async (req, res) => {
+    try{
+        const themeParkData = await themePark.findAll()
+        const themeparks = themeParkData.map((index) => index.get({ plain: true }));
+        res.render('themeparks', {themeparks});
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/rollercoaster', async (req,res ) => {
+    try{
+            const coasterData = await rollerCoaster.findAll()
+            const rollercoasters = coasterData.map((index) => index.get({ plain: true }));
+            res.render('rollercoasters', {rollercoasters});
+        } catch (err) {
+            res.status(500).json(err);
+        }
+});
+
 module.exports = router;
