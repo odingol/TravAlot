@@ -17,6 +17,16 @@ router.get('/resorts', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
+
+router.get('/waterparks', async (req, res) => {
+    try{
+        const waterData = await waterPark.findAll()
+        const waterparks = waterData.map((index) => index.get({ plain: true }));
+        res.render('waterparks', {waterparks});
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;
