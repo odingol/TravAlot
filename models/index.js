@@ -1,7 +1,23 @@
 const User = require('./users');
-const attractions = require('./attractions');
+const {resort, rollerCoaster, waterPark, themePark} = require('./attractions');
 
-User.hasMany(attractions, {
+
+User.hasMany(resort, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+User.hasMany(waterPark, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+User.hasMany(themePark, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+User.hasMany(rollerCoaster, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
@@ -24,4 +40,4 @@ rollerCoaster.belongsTo(User, {
 
 // I will need to double check to make sure this is formatted correctly. Going to push now and will talk with groupmates or tutor to confirm. //
 
-module.exports = { User, attractions };
+module.exports = { User, waterPark, resort, themePark, rollerCoaster };

@@ -1,19 +1,12 @@
 const router = require('express').Router();
-const {resort} = require('../models');
+const {resort} = require('../../models');
 
+// All Routes start with '/api/resorts'
 router.get('/', async (req, res) => {
-    try {
-        res.render('home');
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-router.get('/resorts', async (req, res) => {
     try{
         const resortData = await resort.findAll()
         const resorts = resortData.map((index) => index.get({ plain: true }));
-        res.render('resorts', {resorts});
+        res.status(200).json(resorts);
     } catch (err) {
         res.status(500).json(err);
     }
