@@ -28,6 +28,15 @@ body {
     color: white;
 }
 
+.slide-section {
+    min-height: 400px;
+    width: 100%;
+}
+
+.project-section {
+    min-height: 300px;
+}
+
 
 .cards {
     background-color: rgba(196, 216, 247, 0.884);
