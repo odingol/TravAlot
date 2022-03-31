@@ -58,4 +58,12 @@ router.post('/logout', (req, res) => {
     }
 });
 
+// router.post *Resorts*
+
+// router.post *Theme Parks*
+
+// router.post *Water Parks*
+
+// router.post *Roller Coasters*
+
 module.exports = router;

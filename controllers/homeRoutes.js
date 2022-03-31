@@ -1,5 +1,9 @@
 const router = require('express').Router();
 const {resort} = require('../models');
+// const {User} = require('../models');
+// const {themeParks} = require('../models');
+// const {waterParks} = require('../models');
+// const {rollerCoasters} = require('../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -48,5 +52,16 @@ router.get('/rollercoaster', async (req,res ) => {
             res.status(500).json(err);
         }
 });
+
+// Ask tutor about structuring
+// router.get('/user', async (req, res) => {
+//     try {
+//         const userData = await user.findOne({ where: { email: req.body.email } });
+//         const users = userData.map((index) => index.get({ plain: true }));
+//         res.render('user', {user});
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 module.exports = router;
