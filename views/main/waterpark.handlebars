@@ -14,7 +14,7 @@
                         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="#">Water Parks</a>
+                        <a class="nav-link" href="waterpark.handlebars">Water Parks</a>
                     </li>
                     <li class="nav-item p-3">
                         <a class="nav-link" href="#">Theme Parks</a>
@@ -32,7 +32,7 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search">
                 <button class="btn btn-outline-light my-sm-0" type="submit">Search</button>
                 <button class="btn login-btn pl-3 pr-4" data-toggle="tooltip" data-placement="bottom"
-                    title="Profile Login"><i class="fa-solid fa-user fa-lg"></i></button>
+                    title="Profile"><i class="fa-solid fa-user fa-lg"></i></button>
             </form>
             </div>
         </nav>
@@ -63,7 +63,7 @@
                         left
                         behind a tropical paradise where you’ll experience peaceful bliss and pulse-pounding adventure
                         alike! </p>
-                    <ul ul class="text-left">
+                    <ul class="text-left">
                         <li><b>Visits a year: 2.25 million</b></li>
                         <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/typhoon-lagoon/" target="_blank">
                                 Typhoon Lagoon Website</a></li>
@@ -72,11 +72,11 @@
                                 https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-typhoon-lagoon-water-park/</a>
                         </li>
                     </ul>
-                    <button>Save This Park!</button>
+                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
                 </div>
             </div>
             <div class="col">
-                <img src="../../img/water-park-bg.jpg" class="rounded float-right" alt="Typhoon Lagoon image"
+                <img src="../../public/img/water-park-bg.jpg" class="rounded float-right" alt="Typhoon Lagoon image"
                     style="width: 40rem">
             </div>
         </section>
@@ -93,7 +93,7 @@
                         Resort, features one of the world's tallest and fastest free-falling waterslides, as well as
                         slides and rides for the whole family—like a kid-sized, snow-castle fountain play area with
                         scaled-down versions of the thrilling attractions.</p>
-                    <ul ul class="text-left">
+                    <ul class="text-left">
                         <li><b>Visits a year: 1.98 million</b></li>
                         <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/blizzard-beach/" target="_blank">
                                 Blizzard Beach Website</a></li>
@@ -102,10 +102,10 @@
                                 https://www.officialticketcenter.com/Blizzard-Beach-Rides.aspx</a></li>
                     </ul>
                 </div>
-                <button>Save This Park!</button>
+                <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
             <div class="col">
-                <img src="../../img/blizzard-beach-img.jpg" class="rounded float-right" alt="Blizzard Beach image"
+                <img src="../../public/img/blizzard-beach-img.jpg" class="rounded float-right" alt="Blizzard Beach image"
                     style="width: 40rem">
             </div>
         </section>
@@ -125,7 +125,7 @@
                         Ohyah & Ohno Drop Slides. Or, take a relaxing dip in the Puka Uli Lagoon.
                         Universal’s Volcano Bay further benefits from the innovative TapuTapu wearable technology.
                     </p>
-                    <ul ul class="text-left">
+                    <ul class="text-left">
                         <li><b>Visits a year: 1.81 million</b></li>
                         <li><b>Website:</b><a href="https://www.universalorlando.com/web/en/us/theme-parks/volcano-bay" target="_blank">
                                 Universal's Volcano Bay Website</a></li>
@@ -135,10 +135,10 @@
                         </li>
                     </ul>
                 </div>
-                <button>Save This Park!</button>
+                <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
             <div class="col">
-                <img src="../../img/universal-volcano-img.jpg" class="rounded float-right"
+                <img src="../../public/img/universal-volcano-img.jpg" class="rounded float-right"
                     alt="Universal's Volcano Bay image" style="width: 40rem">
             </div>
         </section>
@@ -168,10 +168,10 @@
                         </li>
                     </ul>
                 </div>
-                <button>Save This Park!</button>
+                <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
             <div class="col">
-                <img src="../../img/atlantis-img.jpg" class="rounded float-right" alt="Atlantis Aquaventure image"
+                <img src="../../public/img/atlantis-img.jpg" class="rounded float-right" alt="Atlantis Aquaventure image"
                     style="width: 40rem">
             </div>
         </section>
@@ -198,15 +198,90 @@
                         </li>
                     </ul>
                 </div>
-                <button>Save This Park!</button>
+                <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
             <div class="col">
-                <img src="../../img/aquatica-img.jpg" class="rounded float-right" alt="Atlantis Aquaventure image"
+                <img src="../../public/img/aquatica-img.jpg" class="rounded float-right" alt="Atlantis Aquaventure image"
                     style="width: 40rem">
             </div>
         </section>
-
     </main>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQVDg-KzR2HpDshaYll5soqQuNdg5vZiA&callback=initMap"></script>
-<script src="../../public/js/waterpark.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQVDg-KzR2HpDshaYll5soqQuNdg5vZiA&callback=initMap"></script>
+    <script>
+    function initMap() {
+        var options = {
+            zoom: 10,
+            center: { lat: 28.3772, lng: -81.5707 }
+        }
+
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+        var markers = [
+            {
+                coords: { lat: 28.3658, lng: -81.5296 },
+                content: '<h1> Typhoon Lagoon at Walt Disney World Resort, Address: 1145 E Buena Vista Dr, Orlando, FL 32830, Visits a year: 2.25 million  </h1>'
+            },
+            {
+                coords: { lat: 28.3513, lng: -81.5763 },
+                content: '<h1>Blizzard Beach, Address: 1534 Blizzard Beach Drive, Orlando, FL 32836, Visits a year: 1.98 million</h1>'
+
+            },
+
+            {
+                coords: { lat: 28.4615, lng: -81.4731 },
+                content: '<h1>Universal’s Volcano Bay, Address: 6000 Universal Blvd, Orlando, FL 32819, Visits a year: 1.81 million   </h1>'
+
+            },
+
+            {
+                coords: { lat: 28.4153, lng: -81.4554 },
+                content: '<h1>Aquatica, Address: 5800 Water Play Way, Orlando, FL 32821,Visits a year: 1.53 million  </h1>'
+
+            },
+
+            {
+                coords: { lat: 25.0862, lng: -77.3238 },
+                content: '<h1> Atlantis Aquaventure, Address: One Casino Drive, Suite 42, Paradise Island, Bahamas, Visits a year: 1.81 million   </h1>'
+
+            }
+
+        ];
+
+        //Loop through markers
+
+        for (var i = 0; i < markers.length; i++) {
+            addMarker(markers[i]);
+        }
+
+
+        //Add Marker Function
+        function addMarker(props) {
+            var marker = new google.maps.Marker({
+                position: props.coords,
+                map: map,
+                icon: 'http://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+            });
+
+
+            //check content
+            if (props.content) {
+                var infoWindow = new google.maps.InfoWindow({
+                    content: props.content
+
+                });
+
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
+            }
+
+        }
+
+    }
+</script>
+
+
+
