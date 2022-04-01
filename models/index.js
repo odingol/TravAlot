@@ -38,14 +38,14 @@ rollerCoaster.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-User.hasMany(review, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-});
+// User.hasMany(review, {
+//   foreignKey: 'user_id',
+//   onDelete: 'CASCADE'
+// });
 
-review.belongsTo(User, {
-  foreignKey: 'user_id'
-});
+// review.belongsTo(User, {
+//   foreignKey: 'user_id'
+// });
 
 // I will need to double check to make sure this is formatted correctly. Going to push now and will talk with groupmates or tutor to confirm. //
 
