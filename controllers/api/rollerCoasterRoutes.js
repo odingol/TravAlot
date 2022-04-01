@@ -14,6 +14,8 @@ router.get('/', async (req,res ) => {
 router.post('/', async (req, res) => {
     try {
         const coasterData = await rollerCoaster.create({...req.body, user_id: req.session.user_id});
+        const rollercoasters = coasterData.get({ plain: true });
+        res.status(200).json(rollercoasters);
     } catch (err) {
         res.status(500).json(err);
     }
