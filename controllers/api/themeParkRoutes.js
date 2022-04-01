@@ -10,4 +10,13 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.post('/', async (req, res) => {
+    try {
+        const themeParkData = await themePark.create({...req.body, user_id: req.session.user_id});
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
