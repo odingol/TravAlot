@@ -14,6 +14,8 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const themeParkData = await themePark.create({...req.body, user_id: req.session.user_id});
+        const themeparks = themeParkData.get({ plain: true });
+        res.status(200).json(themeparks);
     } catch (err) {
         res.status(500).json(err);
     }
