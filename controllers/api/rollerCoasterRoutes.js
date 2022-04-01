@@ -11,4 +11,12 @@ router.get('/', async (req,res ) => {
     }
 });
 
+router.post('/', async (req, res) => {
+    try {
+        const coasterData = await rollerCoaster.create({...req.body, user_id: req.session.user_id});
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
