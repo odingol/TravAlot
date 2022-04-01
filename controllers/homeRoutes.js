@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/resorts', async (req, res) => {
+router.get('/resort', async (req, res) => {
     try{
         const resortData = await resort.findAll()
         const resorts = resortData.map((index) => index.get({ plain: true }));
@@ -23,7 +23,7 @@ router.get('/resorts', async (req, res) => {
     }
 });
 
-router.get('/waterparks', async (req, res) => {
+router.get('/waterpark', async (req, res) => {
     try{
         const waterData = await waterPark.findAll()
         const waterparks = waterData.map((index) => index.get({ plain: true }));
@@ -33,7 +33,7 @@ router.get('/waterparks', async (req, res) => {
     }
 });
 
-router.get('/themeparks', async (req, res) => {
+router.get('/themepark', async (req, res) => {
     try{
         const themeParkData = await themePark.findAll()
         const themeparks = themeParkData.map((index) => index.get({ plain: true }));
