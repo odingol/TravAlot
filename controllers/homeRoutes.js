@@ -64,6 +64,16 @@ router.get('/login', async (req,res ) => {
         }
 });
 
+router.get('/signup', (req, res ) => {
+    try{
+            // const signupData = await User.findAll()
+            // const signups = signupData.map((index) => index.get({ plain: true }));
+            res.render('signup');
+        } catch (err) {
+            res.status(500).json(err);
+        }
+});
+
 
 router.get('/user', async (req, res) => {
     try {

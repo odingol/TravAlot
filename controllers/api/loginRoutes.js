@@ -55,4 +55,27 @@ router.post('/logout', (req, res) => {
     }
 });
 
+router.post('/signup', (req, res) => {
+try {
+    const formData = req.body;
+    User.create(formData)
+    .then((row) => {
+            req.session.user_id = row.id;
+            req.session.logged_in = true;
+
+            res.redirect('/user');
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(400).json(err);
+    })
+}
+
+catch (err) {
+console.log(err)
+res.status(400).json(err);
+}
+
+})
+
 module.exports = router;
