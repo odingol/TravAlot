@@ -20,7 +20,7 @@
                         <a class="nav-link" href="/themepark">Theme Parks</a>
                     </li>
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="/rollercoaster">Roller Coasters</a>
+                        <a class="nav-link" href="/coaster">Roller Coasters</a>
                     </li>
                     <li class="nav-item p-3">
                         <a class="nav-link" href="/resort">Resorts</a>
@@ -38,7 +38,7 @@
             </div>
         </nav>
     </header>
-    <main>
+  <main style="background-color:white;">
         <section>
             <div id="map">
             </div>
@@ -62,7 +62,7 @@
                         <li><b>Website:</b><a href="https://www.sixflags.com/greatadventure/attractions/kingda-ka "> https://www.sixflags.com/greatadventure/attractions/kingda-ka </a></li>
                         <li><b>Description Source:</b><a href="https://flavorverse.com/tallest-roller-coasters-in-us/ ">  https://flavorverse.com/tallest-roller-coasters-in-us/ </a></li>
                     </ul>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>    
+                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save this Ride!</button>    
                 </div>
             </div>
             <div class="col">
@@ -86,7 +86,7 @@
                             <li><b>Description Source:</b><a href="https://flavorverse.com/tallest-roller-coasters-in-us/  "> https://flavorverse.com/tallest-roller-coasters-in-us/  </a></li>
                         </ul>
                     </div>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
+                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save this Ride!</button>
             </div>
             <div class="col">
                 <img src="../img/rollcoast22.jpeg" class="rounded float-right" alt="Thrill dragster"
@@ -108,10 +108,10 @@
                             <li><b>Description Source:</b><a href=" https://flavorverse.com/tallest-roller-coasters-in-us/  "> https://flavorverse.com/tallest-roller-coasters-in-us/   </a></li>
                         </ul>
                     </div>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)" >Save This Park!</button>
+                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)" >Save this Ride!</button>
             </div>
             <div class="col">
-                <img src="../public/img/rollercoast3.jpeg" class="rounded float-right" alt="superman escape"
+                <img src="../img/rollercoast3.jpeg" class="rounded float-right" alt="superman escape"
                     style="width: 40rem">
             </div>
         </section>
@@ -130,10 +130,10 @@
                             <li><b>Description Source:</b><a href="https://flavorverse.com/tallest-roller-coasters-in-us/ "> https://flavorverse.com/tallest-roller-coasters-in-us/  </a></li>
                         </ul>
                     </div>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)" >Save This Park!</button>
+                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)" >Save this Ride!</button>
             </div>
             <div class="col">
-                <img src="..img/rollercoast4.jpeg" class="rounded float-right" alt="rollercoast"
+                <img src="../img/rollercoast4.jpeg" class="rounded float-right" alt="rollercoast"
                     style="width: 40rem">
             </div>
         </section>
@@ -152,10 +152,10 @@
                             <li><b>Description Source:</b><a href=" https://flavorverse.com/tallest-roller-coasters-in-us/ "> https://flavorverse.com/tallest-roller-coasters-in-us/ </a></li>
                         </ul>
                     </div>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
+                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save this Ride!</button>
             </div>
             <div class="col">
-                <img src="../public/img/rollercoast5.jpeg" class="rounded float-right" alt="Millenium Force"
+                <img src="../img/rollercoast5.jpeg" class="rounded float-right" alt="Millenium Force"
                     style="width: 40rem">
             </div>
         </section>
@@ -165,8 +165,8 @@
 <script>
     function initMap() {
         var options = {
-            zoom: 7,
-            center: { lat: 28.3772, lng: -81.5707 }
+            zoom: 5,
+            center: { lat: 41.4828, lng: -82.6853 }
         }
 
         var map = new google.maps.Map(document.getElementById('map'), options);
@@ -174,7 +174,7 @@
 
         var markers = [
             {
-                coords: { lat: 40.1398°, lng: -74.4355 },
+                coords: { lat: 40.1398, lng: -74.4355 },
                 content: '<h2>Kingda Ka, Six Flags Great Adventure, Jackson, New Jersey, 1 Six Flags Blvd, Jackson Township, NJ 08527  </h2>' 
             },
             {
