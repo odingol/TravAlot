@@ -78,9 +78,10 @@ router.get('/signup', (req, res ) => {
 router.get('/user', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { id: req.session.user_id } });
-        const users = userData.map((index) => index.get({ plain: true }));
+        const users = userData.get({ plain: true });
         res.render('user', {users});
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
