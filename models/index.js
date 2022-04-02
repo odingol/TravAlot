@@ -1,4 +1,4 @@
-const User = require('./users');
+const { User } = require('./users');
 const {resort, rollerCoaster, waterPark, themePark} = require('./attractions');
 
 

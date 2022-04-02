@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const {resort} = require('../models');
-const {User} = require('../models');
+const {User, Login} = require('../models');
 const {themePark} = require('../models');
 const {waterPark} = require('../models');
 const {rollerCoaster} = require('../models');
+
 
 router.get('/', async (req, res) => {
     try {
@@ -53,12 +54,22 @@ router.get('/rollercoaster', async (req,res ) => {
         }
 });
 
+router.get('/login', async (req,res ) => {
+    try{
+            const loginData = await rollerCoaster.findAll()
+            const rollercoasters = coasterData.map((index) => index.get({ plain: true }));
+            res.render('login', {rollercoasters});
+        } catch (err) {
+            res.status(500).json(err);
+        }
+});
+
 
 router.get('/user', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { id: req.session.user_id } });
         const users = userData.map((index) => index.get({ plain: true }));
-        res.render('user', {user});
+        res.render('user', {users});
     } catch (err) {
         res.status(500).json(err);
     }
