@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Login } = require('../../models');
+const { User } = require('../../models');
 
 // All Routes start with '/api/resorts'
 router.get('/', async (req, res) => {
@@ -55,20 +56,17 @@ router.post('/logout', (req, res) => {
     }
 });
 
-router.post('/signup', (req, res) => {
+router.post('/signup', async (req, res) => {
 try {
-    const formData = req.body;
-    User.create(formData)
-    .then((row) => {
-            req.session.user_id = row.id;
+    const formData = await User.create(req.body);
+
+    req.session.save(() => {
+            req.session.user_id = formData.id;
             req.session.logged_in = true;
 
             res.redirect('/user');
-    })
-    .catch(err => {
-        console.log(err)
-        res.status(400).json(err);
-    })
+            res.status(200).json(row);
+    });
 }
 
 catch (err) {
