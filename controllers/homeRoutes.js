@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const {resort} = require('../models');
-const {User, Login} = require('../models');
+const {User} = require('../models');
 const {themePark} = require('../models');
 const {waterPark} = require('../models');
 const {rollerCoaster} = require('../models');
-
+const {Login} = require('../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -56,9 +56,9 @@ router.get('/rollercoaster', async (req,res ) => {
 
 router.get('/login', async (req,res ) => {
     try{
-            const loginData = await rollerCoaster.findAll()
-            const rollercoasters = coasterData.map((index) => index.get({ plain: true }));
-            res.render('login', {rollercoasters});
+            const loginData = await Login.findAll()
+            const logins = loginData.map((index) => index.get({ plain: true }));
+            res.render('login', {logins});
         } catch (err) {
             res.status(500).json(err);
         }
