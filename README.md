@@ -86,7 +86,7 @@ The main challenges faced in this project was coordinating with the front end an
 
 ## QUESTIONS
 
-If you have any further questions about this module or improvement ideas, please feel free to connect on either GitHub or LinkedIn, or email me at:
+If you have any further questions about this module or improvement ideas, please feel free to connect on GitHub with us:
 
 - Chris's GitHub: https://github.com/Mugisha27
 - Daniels's GitHub: https://github.com/laperolanegra10
