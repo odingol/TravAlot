@@ -6,12 +6,13 @@ const resortRoutes = require('./resortRoutes');
 const waterParkRoutes = require('./waterParkRoutes');
 const themeParkRoutes = require('./themeParkRoutes');
 const rollerCoasterRoutes = require('./rollerCoasterRoutes');
-const loginRoutes = require('./')
+const loginRoutes = require('./loginRoutes');
 
 router.use('/users', userRoutes);
 router.use('/resorts', resortRoutes);
 router.use('/waterparks', waterParkRoutes);
 router.use('/themeparks', themeParkRoutes);
 router.use('/rollercoasters', rollerCoasterRoutes);
+router.use('/login', loginRoutes);
 
 module.exports = router;

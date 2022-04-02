@@ -1,4 +1,5 @@
-const { User } = require('./users');
+const User  = require('./users');
+const Login = require('./login');
 const {resort, rollerCoaster, waterPark, themePark} = require('./attractions');
 
 
@@ -38,5 +39,9 @@ rollerCoaster.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
+User.hasOne(Login, {
+  foreignKey: 'user_id'
+});
 
-module.exports = { User, waterPark, resort, themePark, rollerCoaster };
+
+module.exports = { User, Login, waterPark, resort, themePark, rollerCoaster };

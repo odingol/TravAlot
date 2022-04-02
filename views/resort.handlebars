@@ -1,7 +1,7 @@
 <header class="w-100">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(42, 69, 104)">
             <div class="col-md-4 cotainer-fluid">
-                <h1 class="p-3"><a class="navbar-brand" href="#">Travel App</a></h1>
+                <h1 class="p-3"><a class="navbar-brand" href="#">TravelAlot</a></h1>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
                         <a class="nav-link" href="/themepark">Theme Parks</a>
                     </li>
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="/rollercoast">Roller Coasters</a>
+                        <a class="nav-link" href="/rollercoaster">Roller Coasters</a>
                     </li>
                     <li class="nav-item p-3">
                         <a class="nav-link" href="/resort">Resorts</a>
@@ -37,7 +37,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main style="background-color: white;">
         <section>
             <div id="map">
             </div>
@@ -162,11 +162,17 @@
     </main>
 
 
+
+
+
+
+
+
 <script>
     function initMap() {
         var options = {
-            zoom: 7,
-            center: { lat: 28.3772, lng: -81.5707 }
+            zoom: 3,
+            center: { lat: 21.0016, lng: -156.6645 }
         }
 
         var map = new google.maps.Map(document.getElementById('map'), options);
@@ -174,7 +180,7 @@
 
         var markers = [
             {
-                coords: { lat: 21.0016°, lng: -156.6645 },
+                coords: { lat: 21.0016, lng: -156.6645 },
                 content: '<h2>Montage Kapalua Bay, 1 Bay Dr, Lahaina, HI 96761  </h2>' 
             },
             {
@@ -196,7 +202,7 @@
             },
 
             {
-                coords: { lat: 33.8361, ln g: - 81.1637},
+                coords: { lat: 33.8361, lng: - 81.1637},
                 content: '<h2> The Inn & Club at Harbour Town - The Sea Pines Resort, 7 Lighthouse Ln, Hilton Head Island, SC 29928 </h2>'
 
             }
@@ -236,6 +242,5 @@
     }
 </script>
 
-{{!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQVDg-KzR2HpDshaYll5soqQuNdg5vZiA&callback=initMap"></script> --}}
 
 

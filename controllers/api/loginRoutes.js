@@ -1,6 +1,18 @@
 const router = require('express').Router();
 const { Login } = require('../../models');
 
+// All Routes start with '/api/resorts'
+router.get('/', async (req, res) => {
+    try{
+        const loginData = await Login.findAll()
+        const logins = loginData.map((index) => index.get({ plain: true }));
+        res.status(200).json(logins);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
 router.post('/login', async (req, res) => {
     try {
         const userData = await Login.findOne({ where: { email: req.body.email } });
@@ -42,3 +54,5 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
+
+module.exports = router;
