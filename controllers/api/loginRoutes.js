@@ -65,15 +65,15 @@ try {
             req.session.logged_in = true;
 
             res.redirect('/user');
-            res.status(200).json(row);
+            // res.status(200).json(formData);
     });
 }
 
 catch (err) {
 console.log(err)
 res.status(400).json(err);
-}
+};
 
-})
+});
 
 module.exports = router;
