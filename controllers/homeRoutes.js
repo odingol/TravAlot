@@ -44,11 +44,11 @@ router.get('/themepark', async (req, res) => {
     }
 });
 
-router.get('/rollercoaster', async (req,res ) => {
+router.get('/coaster', async (req,res ) => {
     try{
             const coasterData = await rollerCoaster.findAll()
             const rollercoasters = coasterData.map((index) => index.get({ plain: true }));
-            res.render('rollercoaster', {rollercoasters});
+            res.render('coaster', {rollercoasters});
         } catch (err) {
             res.status(500).json(err);
         }

@@ -12,7 +12,7 @@ router.use('/users', userRoutes);
 router.use('/resorts', resortRoutes);
 router.use('/waterparks', waterParkRoutes);
 router.use('/themeparks', themeParkRoutes);
-router.use('/rollercoasters', rollerCoasterRoutes);
+router.use('/coasters', rollerCoasterRoutes);
 router.use('/login', loginRoutes);
 
 module.exports = router;
