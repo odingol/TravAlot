@@ -157,5 +157,5 @@ waterPark.init(
   }
 );
 
-// heroku update
+// heroku updated
 module.exports = { resort, rollerCoaster, themePark, waterPark };
