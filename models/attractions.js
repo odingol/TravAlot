@@ -23,10 +23,6 @@ resort.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    yearlyVisits: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
     description: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -63,7 +59,7 @@ rollerCoaster.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    yearlyVisits: {
+    height: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
