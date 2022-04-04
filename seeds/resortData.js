@@ -6,6 +6,8 @@ const resortData = [
     website:'https://www.montagehotels.com/kapaluabay/',
     address:'1 Bay Dr, Lahaina, HI 96761',
     description:'Travelers are hard-pressed to find much to complain about at the Montage Kapalua Bay. Located on the northwest corner of Maui, this 24-acre property offers panoramic views of the beach and ocean. Visitors can spend their time on the water with activities that range from sport fishing to snorkeling. The resort also offers more adventurous pursuits like zip lining and helicopter tours, as well as traditional Hawaiian luau shows. Other activity options include shopping, golfing on two award-winning courses or playing a round of tennis at the hotel\'s courts. If you\'re looking to relax, you can enjoy the complimentary beach towels and chairs, take advantage of the poolside Hana Hou Bar & Sunset Patio or indulge in a spa treatment. Accommodations here are one-, two-, three- or four-bedroom suites and each come equipped with separate living and sleeping areas, and furnished lanais. Additional amenities include flat-screen TVs, in-room laundry facilities and bathrooms with separate tubs and showers. To top off their great experiences, recent guests said all staff members, from the pool attendants to the restaurant servers, went above and beyond to ensure they had a pleasurable stay. Plus, since it\'s part of the Preferred Hotels & Resorts family, it allows I Prefer members to earn or redeem points for stays.',
+    description_source: 'https://travel.usnews.com/hotels/Best-Resorts-in-USA/',
+    image: '/img/resort1.jpeg',
   },
   {
     name: 'Acqualina Resort & Residences on the Beach',

@@ -49,30 +49,30 @@
                 <hr class="divider">
             </div>
         </section>
+        {{#each resorts as |resort| }}
         <section class="row p-4 m-0 section-divide">
-            
             <div class="col text-center">
-                <h4>Montage Kapalua Bay </h4>
-                <p>1 Bay Dr, Lahaina, HI 96761</p>
+                <h4>{{resort.name}}</h4>
+                <p>{{resort.address}}</p>
                 <br>
                 <div class="p-2">
-                <p>Travelers are hard-pressed to find much to complain about at the Montage Kapalua Bay. Located on the northwest corner of Maui, this 24-acre property offers panoramic views of the beach and ocean. Visitors can spend their time on the water with activities that range from sport fishing to snorkeling. The resort also offers more adventurous pursuits like zip lining and helicopter tours, as well as traditional Hawaiian luau shows. Other activity options include shopping, golfing on two award-winning courses or playing a round of tennis at the hotel's courts. If you're looking to relax, you can enjoy the complimentary beach towels and chairs, take advantage of the poolside Hana Hou Bar & Sunset Patio or indulge in a spa treatment. Accommodations here are one-, two-, three- or four-bedroom suites and each come equipped with separate living and sleeping areas, and furnished lanais. Additional amenities include flat-screen TVs, in-room laundry facilities and bathrooms with separate tubs and showers. To top off their great experiences, recent guests said all staff members, from the pool attendants to the restaurant servers, went above and beyond to ensure they had a pleasurable stay. Plus, since it's part of the Preferred Hotels & Resorts family, it allows I Prefer members to earn or redeem points for stays</p>
+                <p>{{resort.description}}</p>
                     <ul class="text-left">
                         
-                        <li><b>Website:</b><a href="https://www.montagehotels.com/kapaluabay/  "> https://www.montagehotels.com/kapaluabay/  </a></li>
-                        <li><b>Description Source:</b><a href="https://travel.usnews.com/hotels/Best-Resorts-in-USA/  ">  https://travel.usnews.com/hotels/Best-Resorts-in-USA/  </a></li>
+                        <li><b>Website: </b><a href="{{resort.website}}">{{resort.website}}</a></li>
+                        <li><b>Description Source:</b><a href="{{resort.description_source}}">{{resort.description_source}}</a></li>
                     </ul>
                     <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save this Stay!</button>    
                 </div>
             </div>
             <div class="col">
-                <img src="../img/resort1.jpeg" class="rounded float-right" alt="montage kapalua bay"
+                <img src="{{resort.image}}" class="rounded float-right" alt="montage kapalua bay"
                     style="width: 40rem">
             </div>
         </section>
-
+        {{/each}}
        
-        <section class="row p-4 m-0 section-divide">
+        {{!-- <section class="row p-4 m-0 section-divide">
             
             <div class="col text-center">
                 <h4> Acqualina Resort & Residences on the Beach</h4>
@@ -158,7 +158,7 @@
                 <img src="../img/resort5.jpeg" class="rounded float-right" alt="the inn club"
                     style="width: 40rem">
             </div>
-        </section>
+        </section> --}}
 
     </main>
 
