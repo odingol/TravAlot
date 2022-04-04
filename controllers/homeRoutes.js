@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const {resort} = require('../models');
-const {User} = require('../models');
+const {User, Login} = require('../models');
 const {themePark} = require('../models');
 const {waterPark} = require('../models');
 const {rollerCoaster} = require('../models');
-const {Login} = require('../models');
+
 
 router.get('/', async (req, res) => {
     try {
@@ -44,11 +44,11 @@ router.get('/themepark', async (req, res) => {
     }
 });
 
-router.get('/coaster', async (req,res ) => {
+router.get('/rollercoaster', async (req,res ) => {
     try{
             const coasterData = await rollerCoaster.findAll()
             const rollercoasters = coasterData.map((index) => index.get({ plain: true }));
-            res.render('coaster', {rollercoasters});
+            res.render('rollercoaster', {rollercoasters});
         } catch (err) {
             res.status(500).json(err);
         }
@@ -56,19 +56,9 @@ router.get('/coaster', async (req,res ) => {
 
 router.get('/login', async (req,res ) => {
     try{
-            const loginData = await Login.findAll()
+            const loginData = await rollerCoaster.findAll()
             const logins = loginData.map((index) => index.get({ plain: true }));
             res.render('login', {logins});
-        } catch (err) {
-            res.status(500).json(err);
-        }
-});
-
-router.get('/signup', (req, res ) => {
-    try{
-            // const signupData = await User.findAll()
-            // const signups = signupData.map((index) => index.get({ plain: true }));
-            res.render('signup');
         } catch (err) {
             res.status(500).json(err);
         }

@@ -59,11 +59,7 @@ User.init(
     underscored: true,
     modelName: "user",
   }
-  );
-  
-  module.exports = User;
-
-
+);
 
 // class Login extends Model {
 //   checkPassword(loginPw) {
@@ -95,7 +91,7 @@ User.init(
 //       },
 //     }
 //   },
-//   {
+//   { 
 //       hooks: {
 //         beforeCreate: async (newUserData) => {
 //           newUserData.password = await bcrypt.hash(newUserData.password, 10);
@@ -118,4 +114,6 @@ User.init(
 // );
 
 
+
+module.exports = User;
 
