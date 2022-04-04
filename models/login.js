@@ -29,7 +29,7 @@ class Login extends Model {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [8],
+          len: [5],
         },
       }
     },
@@ -40,10 +40,7 @@ class Login extends Model {
             return newUserData;
           },
           beforeUpdate: async (updatedUserData) => {
-            updatedUserData.password = await bcrypt.hash(
-              updatedUserData.password,
-              10
-            );
+            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
             return updatedUserData;
           },
         },

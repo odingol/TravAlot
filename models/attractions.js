@@ -33,7 +33,7 @@ resort.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'parkType'
+    modelName: 'resort'
   }
 );
 
@@ -73,7 +73,7 @@ rollerCoaster.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'parkType'
+    modelName: 'coaster'
   }
 );
 
@@ -113,7 +113,7 @@ themePark.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'parkType'
+    modelName: 'themepark'
   }
 );
 
@@ -153,7 +153,7 @@ waterPark.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'parkType'
+    modelName: 'waterpark'
   }
 );
 
