@@ -50,31 +50,34 @@
                 <hr class="divider">
             </div>
         </section>
+        {{#each themeparks as |themePark|}}
         <section class="row p-4 m-0 section-divide">
             
             <div class="col text-center">
-                <h4>Magic Kingdom Walt Disney World </h4>
-                <p>Lake Buena Vista, FL 32836</p>
+                <h4>{{themePark.name}}</h4>
+                <p>{{themePark.address}}</p>
                 <br>
                 <div class="p-2">
-                <p>The world’s most famous theme park, Magic Kingdom Park at Walt Disney World® Resort in Orlando is the place where childhood dreams come true. With more than 40 unforgettable attractions, themed dining and shopping, and countless surprises, your imagination is the limit when you’re at “The Most Magical Place on Earth</p>
+                <p>{{themePark.description}}</p>
                     <ul class="text-left">
                         <li><b>Visits a year: 20.96 million</b></li>
-                        <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/magic-kingdom/"> Magic Kingdom Walt Disney World Website</a></li>
-                        <li><b>Description Source:</b><a href=" https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/magic-kingdom/">  https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/magic-kingdom/</a></li>
+                        <li><b>Website:</b><a href="{{themePark.website}}">{{themePark.website}} </a></li>
+                        <li><b>Description Source:</b><a href="{{themePark.description_source}}"> {{themePark.description_source}}</a></li>
                     </ul>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>    
+                    <button class="save-attraction-btn p-1" 
+                    data-attraction_type="themePark" data-id="{{themPark}}"
+                    style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>    
                 </div>
             </div>
             <div class="col">
-
-                <img src="../img/themepark1.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+               <img src="{{themePark}}" class="rounded float-right" 
+                alt="Typhoon Lagoon image"
                     style="width: 40rem">
             </div>
         </section>
-
+        {{/each}}
        
-        <section class="row p-4 m-0 section-divide">
+        {{!-- <section class="row p-4 m-0 section-divide">
             
             <div class="col text-center">
                 <h4>Disney’s Animal Kingdom </h4>
@@ -161,7 +164,7 @@
                 <img src="../img/themepark5.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
                     style="width: 40rem">
             </div>
-        </section>
+        </section> --}}
 
     </main>
 
