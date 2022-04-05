@@ -23,9 +23,9 @@ SavedAttractions.init(
       type: DataTypes.INTEGER,
     //   references: {
     //     model: "",
-    //     key: "id"
-    //   },
+    //     key: "id" //   },
     },
+   
     attraction_type: {
         type: DataTypes.STRING
     }
