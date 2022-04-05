@@ -75,6 +75,14 @@ rollerCoaster.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
+    description_source: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
@@ -108,12 +116,20 @@ themePark.init(
       allowNull: true,
     },
     yearlyVisits: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL,
       allowNull: true,
     },
     description: {
       type: DataTypes.TEXT,
       allowNull: true,
+    },
+    description_source: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
@@ -148,12 +164,20 @@ waterPark.init(
       allowNull: true,
     },
     yearlyVisits: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL,
       allowNull: true,
     },
     description: {
       type: DataTypes.TEXT,
       allowNull: true,
+    },
+    description_source: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
