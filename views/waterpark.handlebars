@@ -49,35 +49,29 @@
                 <hr class="divider">
             </div>
         </section>
+        {{#each waterparks as |waterPark| }}
         <section class="row p-4 m-0 section-divide">
 
             <div class="col text-center">
-                <h4>Typhoon Lagoon at Walt Disney World Resort</h4>
-                <p>1145 E Buena Vista Dr, Orlando, FL 32830</p>
+                <h4>{{waterPark.name}}</h4>
+                <p>{{waterPark.address}}</p>
                 <br>
                 <div class="p-2">
-                    <p> Surf’s up at Disney's Typhoon Lagoon Water Park at Walt Disney World® Resort, where legend tells
-                        the
-                        tale of a whirlwind storm. Hurling surfboards into palm trees, propelling small boats onto
-                        rooftops,
-                        and impaling a shrimp boat to the top of volcanic Mount Mayday, the tempest finally calmed and
-                        left
-                        behind a tropical paradise where you’ll experience peaceful bliss and pulse-pounding adventure
-                        alike! </p>
+                    <p> {{waterPark.description}} </p>
                     <ul class="text-left">
-                        <li><b>Visits a year: 2.25 million</b></li>
-                        <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/typhoon-lagoon/" target="_blank">
-                                Typhoon Lagoon Website</a></li>
+                        <li><b>{{waterPark.yearlyVisits}}</b></li>
+                        <li><b>Website:</b><a href="{{waterPark.website}}" target="_blank">
+                                {{waterpark.website}}</a></li>
                         <li><b>Description Source:</b><a
-                                href="https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-typhoon-lagoon-water-park/" target="_blank">
-                                https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-typhoon-lagoon-water-park/</a>
+                                href="{{waterpark.description_source}}" target="_blank">
+                                {{waterpark.description_source}}</a>
                         </li>
                     </ul>
                     <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
                 </div>
             </div>
             <div class="col">
-                <img src="../img/water-park-bg.jpg" class="rounded float-right" alt="Typhoon Lagoon image"
+                <img src="{{waterPark.image}}" class="rounded float-right" alt="Typhoon Lagoon image"
                     style="width: 40rem">
             </div>
         </section>
