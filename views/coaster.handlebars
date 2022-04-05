@@ -49,20 +49,23 @@
                 <hr class="divider">
             </div>
         </section>
+        {{#each coaster as |rollerCoaster|}}
         <section class="row p-4 m-0 section-divide">
             
             <div class="col text-center">
-                <h4>Kingda Ka, Six Flags Great Adventure, Jackson, New Jersey </h4>
-                <p>1 Six Flags Blvd, Jackson Township, NJ 08527</p>
+                <h4>{{rollerCoaster.name}} </h4>
+                <p>{{rollerCoaster.address}}</p>
                 <br>
                 <div class="p-2">
-                <p>The world’s most famous theme park, Magic Kingdom Park at Walt Disney World® Resort in Orlando is the place where childhood dreams come true. With more than 40 unforgettable attractions, themed dining and shopping, and countless surprises, your imagination is the limit when you’re at “The Most Magical Place on Earth</p>
+                <p>{{rollerCoaster.description}}</p>
                     <ul class="text-left">
-                        <li><b>Height: 456 ft</b></li>
-                        <li><b>Website:</b><a href="https://www.sixflags.com/greatadventure/attractions/kingda-ka "> https://www.sixflags.com/greatadventure/attractions/kingda-ka </a></li>
-                        <li><b>Description Source:</b><a href="https://flavorverse.com/tallest-roller-coasters-in-us/ ">  https://flavorverse.com/tallest-roller-coasters-in-us/ </a></li>
+                        <li><b>{{rollerCoaster.height}}</b></li>
+                        <li><b>Website:</b><a href="{{rollerCoaster.website}}">{{rollerCoaster.website}}</a></li>
+                        <li><b>Description Source:</b><a href="{{rollerCoast.description_source}}"> {{rollerCoaster.description_source}} </a></li>
                     </ul>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save this Ride!</button>    
+                    <button class="save-attraction-btn p-1" 
+                    data-attraction-type="rollerCoaster" data-id="{{rollerCoaster}}"
+                    style="background-color: rgba(168, 218, 241, 0.308)">Save this Ride!</button>    
                 </div>
             </div>
             <div class="col">
@@ -70,9 +73,10 @@
                     style="width: 40rem">
             </div>
         </section>
+        {{/each}}
 
        
-        <section class="row p-4 m-0 section-divide">
+        {{!-- <section class="row p-4 m-0 section-divide">
             
             <div class="col text-center">
                 <h4> Top Thrill Dragster, Cedar Point, Sandusky, Ohio</h4>
@@ -158,7 +162,7 @@
                 <img src="../img/rollercoast5.jpeg" class="rounded float-right" alt="Millenium Force"
                     style="width: 40rem">
             </div>
-        </section>
+        </section> --}}
 
     </main>
 
