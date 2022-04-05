@@ -164,7 +164,7 @@ waterPark.init(
       allowNull: true,
     },
     yearlyVisits: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL,
       allowNull: true,
     },
     description: {
