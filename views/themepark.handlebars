@@ -60,17 +60,17 @@
                 <div class="p-2">
                 <p>{{themePark.description}}</p>
                     <ul class="text-left">
-                        <li><b>Visits a year: 20.96 million</b></li>
+                        <li><b>{{themePark.yearlyVisits}}</b></li>
                         <li><b>Website:</b><a href="{{themePark.website}}">{{themePark.website}} </a></li>
                         <li><b>Description Source:</b><a href="{{themePark.description_source}}"> {{themePark.description_source}}</a></li>
                     </ul>
                     <button class="save-attraction-btn p-1" 
-                    data-attraction_type="themePark" data-id="{{themPark}}"
+                    data-attraction_type="themePark" data-id="{{themePark}}"
                     style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>    
                 </div>
             </div>
             <div class="col">
-               <img src="{{themePark}}" class="rounded float-right" 
+               <img src="{{themePark.image}}" class="rounded float-right" 
                 alt="Typhoon Lagoon image"
                     style="width: 40rem">
             </div>

@@ -48,31 +48,31 @@
             <hr class="divider">
         </div>
     </section>
-    {{#each waterParks as |waterpark|}}
+    {{#each waterparks as |waterpark|}}
     <section class="row p-4 m-0 section-divide">
 
         <div class="col text-center">
-            <h4>{{waterPark.name}}</h4>
-            <p>{{waterPark.address}}</p>
+            <h4>{{waterpark.name}}</h4>
+            <p>{{waterpark.address}}</p>
             <br>
             <div class="p-2">
-                <p> {{waterPark.description}} </p>
+                <p> {{waterpark.description}} </p>
                 <ul class="text-left">
-                    <li><b>{{waterPark.yearlyVisits}}</b></li>
-                    <li><b>Website:</b><a href="{{waterPark.website}}"
+                    <li><b>{{waterpark.yearlyVisits}}</b></li>
+                    <li><b>Website:</b><a href="{{waterpark.website}}"
                             target="_blank">
-                            {{waterPark.website}}</a></li>
+                            {{waterpark.website}}</a></li>
                     <li><b>Description Source:</b><a
-                            href="{{waterPark.description_source}}"
+                            href="{{waterpark.description_source}}"
                             target="_blank">
-                            {{waterPark.description_source}}</a>
+                            {{waterpark.description_source}}</a>
                     </li>
                 </ul>
                 <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
         </div>
         <div class="col">
-            <img src="{{waterPark.image}}" class="rounded float-right" alt="Typhoon Lagoon image"
+            <img src="{{waterpark.image}}" class="rounded float-right" alt="Typhoon Lagoon image"
                 style="width: 40rem">
         </div>
     </section>
