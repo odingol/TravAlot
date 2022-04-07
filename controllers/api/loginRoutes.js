@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Login } = require('../../models');
+// const { Login } = require('../../models');
 const { User } = require('../../models');
 
 // All Routes start with '/api/resorts'
 router.get('/', async (req, res) => {
     try{
-        const loginData = await Login.findAll()
-        const logins = loginData.map((index) => index.get({ plain: true }));
+        const userData = await User.findAll()
+        const logins = userData.map((index) => index.get({ plain: true }));
         res.status(200).json(logins);
     } catch (err) {
         res.status(500).json(err);
@@ -16,21 +16,23 @@ router.get('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const userData = await Login.findOne({ where: { email: req.body.email } });
+        const userData = await User.findOne({ where: { email: req.body.email } });
+
 
         if (!userData) {
             res
                 .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
+                .json({ message: 'Incorrect email' });
             return;
         }
 
         const validPassword = await userData.checkPassword(req.body.password);
+        console.log(validPassword);
 
         if (!validPassword) {
             res
                 .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
+                .json({ message: 'Incorrect password' });
             return;
         }
 
