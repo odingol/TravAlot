@@ -1,9 +1,10 @@
 const router = require("express").Router();
 const { resort } = require("../models");
-const { User, Login } = require("../models");
+const { User } = require("../models");
 const { themePark } = require("../models");
 const { waterPark } = require("../models");
 const { rollerCoaster } = require("../models");
+const { Login } = require('../models');
 
 router.get("/", async (req, res) => {
   try {
