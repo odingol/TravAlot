@@ -19,8 +19,13 @@ Our travel application is designed to present users with four different options 
 
 ## APPLICATION IN USE
 
-[DeployedApplication](https://google.com "Link to Deployed Application") 
+[DeployedApplication](https://travalotpj2.herokuapp.com/ "Link to Deployed Application") 
 
+Home Page:
+![ApplicationHomePage](./assets/home-page.png "User-facing home page")
+
+Water Parks Page: 
+![ApplicationWaterParksPage](./assets/waterpark-page.png "Application Specific Page example")
 
 ## INSTALLATION
 This application utilizes: node.js, sequelize, express, express-session, handlebars, bcrypt, dotenv, connect-session-sequelize, and mysql2 with eslint and nodemon as dev dependencies. 
@@ -94,5 +99,3 @@ If you have any further questions about this module or improvement ideas, please
 - Lamor's GitHub: https://github.com/odingol
 - Nathan's GitHub: https://github.com/NathanMilburn
 
-<!-- - LinkedIn: https://www.linkedin.com/in/nathan-milburn-55487513a/
-- E-Mail: nathan.milburn@outlook.com -->
