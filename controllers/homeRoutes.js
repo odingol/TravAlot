@@ -57,7 +57,7 @@ router.get("/coaster", async (req, res) => {
 
 router.get("/login", async (req, res) => {
   try {
-    const loginData = await rollerCoaster.findAll();
+    const loginData = await Login.findAll();
     const logins = loginData.map((index) => index.get({ plain: true }));
     res.render("login", { logins });
   } catch (err) {
