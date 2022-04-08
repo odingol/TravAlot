@@ -7,7 +7,7 @@ const seedResort = require('./resortData');
 
 
 const seedAll = async () => {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
 
     await seedWaterPark();
 
