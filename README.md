@@ -1,4 +1,4 @@
-# Project-2-Travel-App
+# TravAlot
 
 ## USER STORY
 
